@@ -1,0 +1,298 @@
+:root{
+    /* --crimson: font-family: 'Crimson Pro', serif;
+    --lora: font-family: 'Lora', serif;
+    --montserat: font-family: 'Montserrat', sans-serif; */
+    --primary:#181719;
+    --secondary: #FFFFFF;
+    --terceary: #828282;
+    --footer: #A9A9A9;
+}
+
+html{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    width: 100vw;
+    height: 800px;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    background-color: var(--primary);
+}
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+header .logo{
+    margin-left: 12px;
+    justify-self: flex-start;
+    font-family: 'Crimson Pro', serif;
+    font-size: 14px;
+    font-weight: 200;
+    color: var(--secondary);
+    cursor: pointer;
+}
+.logo p{
+    margin-top: 19px;
+    border: 1px solid var(--secondary);
+    padding: 8px;
+}
+.menu .img img{
+    height: 24px;
+    width: 27px;
+}
+nav{
+    margin-right: 12px;
+    justify-self: flex-end;
+    display: grid;
+    place-content: center;
+}
+nav ul{
+    list-style: none;
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    width: fit-content;
+    display: none;
+}
+nav li p{
+    margin: 0px 0px;
+    font-size: 18px;
+    cursor: pointer;
+}
+nav .focus{
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--secondary);
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    grid-auto-rows: max-content;
+    row-gap: 37px;
+}
+main .left-top{
+    height: fit-content;
+    margin: 0px 12px;
+}
+.left-top h1{
+    color: var(--secondary);
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 500;
+    font-family: 'Lora', serif;
+    margin-bottom: 25px;
+}
+.left-top p{
+    color: var(--secondary);
+    font-size: 14px;
+    line-height: 17px;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 250px;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+.left-top p:nth-child(3){
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.left-top span{
+    height: 29px;
+    display: inline-block;
+    margin-left: 8px;
+}
+.left-top span img{
+    width: 29px;
+}
+main .right-bottom{
+    margin: 0px 12px;
+    position: relative;
+}
+.right-bottom .bc-img{
+    background-image: url('./photo1.png');
+    background-position: center;
+    background-size: cover;
+    height: 264px;
+    width: auto;
+}
+main .card{
+    height: 138px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background: #181719;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    right: 10px;
+    transform: translateY(-58px);
+}
+.card .card-header{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "img title"
+                         "img text";
+    padding-top: 13px;
+    height: fit-content;
+    margin-left: 12px;
+
+}
+.card .card-header img{
+    height: 36px;
+    width: 36px;
+    object-fit: cover;
+    border-radius: 100%;
+    grid-area: img;
+    align-self: center;
+    justify-self: center;
+    margin-right: 13px;
+}
+.card .card-header h4{
+    margin: 0px;
+    grid-area: title;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--secondary);
+    font-size: 12px;
+    line-height: 14px;
+    height: fit-content;
+    align-self: flex-end;
+    margin-bottom: 4px;
+}
+.card .card-header p{
+    margin: 0px;
+    grid-area: text;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--terceary);
+    font-size: 10px;
+    line-height: 12px;
+    height: fit-content;
+    align-self: flex-start;
+}
+.card .card-text{
+    height: fit-content;
+    margin-left: 12px;
+
+}
+.card .card-text h2{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    font-family: 'Lora', serif;
+    color: var(--secondary);
+    margin: 0px;
+    max-width: 210px;
+    letter-spacing: 1px;
+}
+
+footer p{
+    width: fit-content;
+    margin: 0px auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--footer);
+}
+
+@media screen and (min-width:900px) {
+    body{
+        height: 900px;
+    }
+    header{
+        margin-bottom: 120px;
+    }
+    header .logo{
+        margin-left: 77px;
+    }
+    .menu .img{
+        display: none;
+    }
+    .menu{
+        width: fit-content;
+        margin-right: 77px;
+    }
+    nav ul{
+        list-style: none;
+        padding: 0px 0px;
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+    }
+    nav ul li{
+        width: fit-content;
+    }
+    nav ul p{
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+        color: var(--secondary);
+        font-size: 14px;
+    }
+    main{
+        grid-auto-rows: 1fr;
+        grid-template-columns: auto 1fr;
+        column-gap: 120px;
+    }
+    main .left-top{
+        margin: 77px 0px 0px 77px;
+    }
+    .left-top{
+        justify-content: center;
+    }
+    .left-top h1{
+        font-size: 40px;
+    }
+    .left-top p{
+        font-size: 18px;
+        line-height: 29px;
+        max-width: 315px;
+    }
+    main .right-bottom{
+        margin: 0px 0px;
+        margin-right: 77px;
+    }
+    .right-bottom .bc-img{
+        height: 500px;
+    }
+    main .card{
+        width: 400px;
+        height: 190px;
+        right: 50px;
+        transform: translateY(-90px);
+    }
+    .card .card-header{
+        margin-left: 22px;
+        align-self: flex-end;
+        margin-bottom: 20px;
+    }
+    .card .card-text{
+        margin-left: 22px;
+    }
+    .card .card-header img{
+        height: 50px;
+        width: 50px;
+    }
+    .card .card-header h4{
+        font-size: 14px;
+    }
+    .card .card-header p{
+        font-size: 12px;
+    }
+    .card .card-text h2{
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
